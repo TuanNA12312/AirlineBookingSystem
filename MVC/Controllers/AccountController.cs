@@ -20,17 +20,17 @@ namespace MVC.Controllers
             _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
+        // --- HÀM 1: TRANG ĐĂNG NHẬP (GET) ---
         [HttpGet]
-        public IActionResult Login(string returnUrl = null)
+        public IActionResult Login()
         {
-            ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
 
+        // --- HÀM 2: XỬ LÝ ĐĂNG NHẬP (POST) - ĐÃ CẬP NHẬT ---
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
-            ViewData["ReturnUrl"] = returnUrl;
             if (!ModelState.IsValid) return View(model);
 
             var client = _httpClientFactory.CreateClient("ApiClient");
@@ -45,12 +45,12 @@ namespace MVC.Controllers
 
                 if (loginResponse != null && !string.IsNullOrEmpty(loginResponse.Token))
                 {
-                    // 1. Lưu Token vào Session (để HttpClient tự động gắn vào)
+                    // 1. Lưu Token vào Session (để HttpClient tự động gắn)
                     HttpContext.Session.SetString("JWToken", loginResponse.Token);
                     // 2. Lưu thông tin User vào Session (để _Layout hiển thị)
                     HttpContext.Session.SetString("UserInfo", JsonSerializer.Serialize(loginResponse.UserInfo));
 
-                    // 3. Tạo Cookie Authentication (để [Authorize] của MVC hoạt động)
+                    // 3. (CODE MỚI) Tạo Cookie Authentication (để [Authorize] của MVC hoạt động)
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, loginResponse.UserInfo.FullName),
@@ -59,7 +59,10 @@ namespace MVC.Controllers
                         new Claim(ClaimTypes.Role, loginResponse.UserInfo.IsAdmin ? "Admin" : "User")
                     };
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    var authProperties = new AuthenticationProperties { IsPersistent = true };
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true // (Ghi nhớ đăng nhập)
+                    };
 
                     await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,
@@ -67,18 +70,20 @@ namespace MVC.Controllers
                         authProperties);
 
                     // 4. Chuyển hướng
-                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
-                        return Redirect(returnUrl);
                     if (loginResponse.UserInfo.IsAdmin)
-                        return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                    {
+                        // (Đổi route, không dùng Area)
+                        return RedirectToAction("Index", "Dashboard");
+                    }
                     return RedirectToAction("Index", "Home");
                 }
             }
 
-            ModelState.AddModelError(string.Empty, "Đăng nhập thất bại. Kiểm tra Email hoặc Mật khẩu.");
+            ModelState.AddModelError(string.Empty, "Đăng nhập thất bại. Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
             return View(model);
         }
 
+        // --- HÀM 3: ĐĂNG KÝ (GET/POST) ---
         [HttpGet]
         public IActionResult Register()
         {
@@ -101,19 +106,22 @@ namespace MVC.Controllers
                 return RedirectToAction("Login");
             }
 
-            string apiError = await response.Content.ReadAsStringAsync();
-            ModelState.AddModelError(string.Empty, apiError);
+            ModelState.AddModelError(string.Empty, "Email đã tồn tại hoặc lỗi.");
             return View(model);
         }
 
-        [HttpPost]
+        // --- HÀM 4: ĐĂNG XUẤT (CẬP NHẬT) ---
+        [HttpPost] // (Dùng POST)
         public async Task<IActionResult> Logout()
         {
+            // Xóa Cookie
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            // Xóa Session
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
         }
 
+        // --- HÀM 5: TRANG CẤM TRUY CẬP (AccessDenied) ---
         [HttpGet]
         public IActionResult AccessDenied()
         {

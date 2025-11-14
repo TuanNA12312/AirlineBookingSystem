@@ -1,0 +1,26 @@
+﻿@model BusinessObject.Flight
+@{
+    ViewData["Title"] = "Xóa Chuyến bay";
+}
+
+<h1>Xóa Chuyến bay</h1>
+<h3 class="text-danger">Bạn có chắc chắn muốn xóa chuyến bay này?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Mã CB</dt>
+        <dd class="col-sm-10">@Model.FlightNumber</dd>
+
+        <dt class="col-sm-2">Tuyến</dt>
+        <dd class="col-sm-10">@Model.DepartureAirportCode &rarr; @Model.ArrivalAirportCode</dd>
+
+        <dt class="col-sm-2">Giờ đi</dt>
+        <dd class="col-sm-10">@Model.DepartureTime</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FlightId" />
+        <input type="submit" value="Xác nhận Xóa" class="btn btn-danger" /> |
+        <a asp-action="Index">Quay lại Danh sách</a>
+    </form>
+</div>

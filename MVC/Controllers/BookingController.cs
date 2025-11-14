@@ -9,7 +9,7 @@ using System.Text.Json;
 
 namespace MVC.Controllers
 {
-    [Authorize] // <-- BẮT BUỘC ĐĂNG NHẬP
+    [Authorize]
     public class BookingController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
