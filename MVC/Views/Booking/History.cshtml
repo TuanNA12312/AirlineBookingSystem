@@ -1,0 +1,44 @@
+﻿@model List<BusinessObject.Booking>
+@{
+    ViewData["Title"] = "Lịch sử đặt vé";
+}
+
+<h1 class="mb-4">Lịch sử đặt vé</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <p>Bạn chưa có lịch sử đặt vé nào.</p>
+}
+else
+{
+    foreach (var booking in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between">
+                <span>Mã đặt chỗ: <strong>@booking.BookingCode</strong></span>
+                <span>Ngày đặt: @booking.BookingDate.ToShortDateString()</span>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tổng tiền: @booking.TotalPrice.ToString("N0") VNĐ</h5>
+
+                @foreach (var ticket in booking.Tickets)
+                {
+                    <div class="border-top mt-2 pt-2">
+                        <p class="mb-0">
+                            <strong>Hành khách:</strong> @ticket.Passenger.FullName
+                        </p>
+                        <p class="mb-0">
+                            <strong>Chuyến bay:</strong> @ticket.Flight.FlightNumber
+                            (@ticket.Flight.DepartureAirportCode &rarr; @ticket.Flight.ArrivalAirportCode)
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

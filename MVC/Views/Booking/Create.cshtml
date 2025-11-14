@@ -1,0 +1,62 @@
+﻿@model MVC.Models.BookingViewModel
+@{
+    ViewData["Title"] = "Đặt vé";
+    var flight = Model.FlightDetails;
+}
+
+<h1 class="mb-4">Xác nhận đặt vé</h1>
+<div class="row">
+    <!-- Cột 1: Thông tin chuyến bay -->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Thông tin chuyến bay</h5>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@flight.Airline.AirlineName (@flight.FlightNumber)</h5>
+                <p><strong>Từ:</strong> @flight.DepartureAirport.AirportName</p>
+                <p><strong>Đến:</strong> @flight.ArrivalAirport.AirportName</p>
+                <p><strong>Cất cánh:</strong> @flight.DepartureTime.ToString("dd/MM/yyyy HH:mm")</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cột 2: Form đặt vé -->
+    <div class="col-md-6">
+        <h4 class="mb-3">Thông tin hành khách & Hạng vé</h4>
+
+        <form asp-controller="Booking" asp-action="Create" method="post">
+            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+
+            <!-- Truyền ID chuyến bay (ẩn) -->
+            <input type="hidden" asp-for="FlightId" />
+
+            <div class="mb-3">
+                <label asp-for="SeatClassId" class="form-label">Hạng ghế</label>
+                <select asp-for="SeatClassId" asp-items="Model.SeatClasses" class="form-select">
+                    <option value="">-- Chọn hạng ghế --</option>
+                </select>
+                <span asp-validation-for="SeatClassId" class="text-danger"></span>
+            </div>
+
+            <hr />
+            <p>(Tạm thời chỉ hỗ trợ 1 hành khách mỗi lần đặt)</p>
+
+            <div class="mb-3">
+                <label asp-for="PassengerName" class="form-label">Họ tên hành khách</label>
+                <input asp-for="PassengerName" class="form-control" />
+                <span asp-validation-for="PassengerName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PassengerDob" class="form-label">Ngày sinh</label>
+                <input asp-for="PassengerDob" type="date" class="form-control" />
+                <span asp-validation-for="PassengerDob" class="text-danger"></span>
+            </div>
+
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Xác nhận Đặt vé</button>
+            </div>
+        </form>
+    </div>
+</div>

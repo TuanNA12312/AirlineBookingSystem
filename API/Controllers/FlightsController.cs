@@ -45,7 +45,7 @@ namespace API.Controllers
 
         // GET: /api/flights/5
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         public async Task<ActionResult<Flight>> GetFlightById(int id)
         {
             var flight = await _flightRepo.GetByIdAsync(id);

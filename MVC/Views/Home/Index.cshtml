@@ -1,0 +1,84 @@
+﻿@model MVC.Models.SearchViewModel
+@{
+    ViewData["Title"] = "Tìm kiếm chuyến bay";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+            <h1 class="text-center mb-4">Tìm chuyến bay</h1>
+
+            <!-- Hiển thị lỗi (nếu có) -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger" asp-validation-summary="All"></div>
+            }
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+            }
+
+            <!-- FORM TÌM KIẾM -->
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label asp-for="FromAirport" class="form-label">Điểm đi</label>
+                        <select asp-for="FromAirport" asp-items="Model.Airports" class="form-select">
+                            <option value="">-- Chọn điểm đi --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="ToAirport" class="form-label">Điểm đến</label>
+                        <select asp-for="ToAirport" asp-items="Model.Airports" class="form-select">
+                            <option value="">-- Chọn điểm đến --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label asp-for="DepartureDate" class="form-label">Ngày đi</label>
+                        <input asp-for="DepartureDate" type="date" class="form-control" />
+                    </div>
+                </div>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Tìm kiếm</button>
+                </div>
+            </form>
+
+            <hr class="my-5" />
+
+            <!-- HIỂN THỊ KẾT QUẢ TÌM KIẾM -->
+            @if (Model.SearchResults != null)
+            {
+                <h3 class="text-center mb-3">Kết quả tìm kiếm</h3>
+
+                @if (!Model.SearchResults.Any())
+                {
+                    <p class="text-center text-muted">Không tìm thấy chuyến bay nào phù hợp.</p>
+                }
+                else
+                {
+                    foreach (var flight in Model.SearchResults)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">@flight.Airline.AirlineName (@flight.FlightNumber)</h5>
+                                <p class="card-text">
+                                    <strong>Từ:</strong> @flight.DepartureAirport.AirportName (@flight.DepartureAirportCode)
+                                    <br />
+                                    <strong>Đến:</strong> @flight.ArrivalAirport.AirportName (@flight.ArrivalAirportCode)
+                                </p>
+                                <p>
+                                    <strong>Cất cánh:</strong> @flight.DepartureTime.ToString("dd/MM/yyyy HH:mm")
+                                    <br />
+                                    <strong>Hạ cánh:</strong> @flight.ArrivalTime.ToString("dd/MM/yyyy HH:mm")
+                                </p>
+                                <!-- Nút Đặt vé (sẽ làm ở bước sau) -->
+                                <a href="#" class="btn btn-success">Chọn vé</a>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+
+        </div>
+    </div>
+</div>
