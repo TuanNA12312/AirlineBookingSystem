@@ -26,17 +26,20 @@ else
             <div class="card-body">
                 <h5 class="card-title">Tổng tiền: @booking.TotalPrice.ToString("N0") VNĐ</h5>
 
-                @foreach (var ticket in booking.Tickets)
+                @if (booking.Tickets != null)
                 {
-                    <div class="border-top mt-2 pt-2">
-                        <p class="mb-0">
-                            <strong>Hành khách:</strong> @ticket.Passenger.FullName
-                        </p>
-                        <p class="mb-0">
-                            <strong>Chuyến bay:</strong> @ticket.Flight.FlightNumber
-                            (@ticket.Flight.DepartureAirportCode &rarr; @ticket.Flight.ArrivalAirportCode)
-                        </p>
-                    </div>
+                    @foreach (var ticket in booking.Tickets)
+                    {
+                        <div class="border-top mt-2 pt-2">
+                            <p class="mb-0">
+                                <strong>Hành khách:</strong> @ticket.Passenger.FullName
+                            </p>
+                            <p class="mb-0">
+                                <strong>Chuyến bay:</strong> @ticket.Flight.FlightNumber
+                                (@ticket.Flight.DepartureAirportCode &rarr; @ticket.Flight.ArrivalAirportCode)
+                            </p>
+                        </div>
+                    }
                 }
             </div>
         </div>

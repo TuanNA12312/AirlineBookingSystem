@@ -9,8 +9,8 @@ namespace Repositories.Interfaces
 {
     public interface IAirportRepository
     {
-        Task<IEnumerable<Airport>> GetAllAsync();
         Task<Airport?> GetByIdAsync(string id);
+        Task<IEnumerable<Airport>> GetAllAsync();
         Task AddAsync(Airport airport);
         Task UpdateAsync(Airport airport);
         Task DeleteAsync(string id);

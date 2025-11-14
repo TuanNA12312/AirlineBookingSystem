@@ -75,12 +75,12 @@ namespace API.Tests
             // Replace this line in PostFlight_Returns_CreatedAtActionResult test:
             // var result = await _controller.Create(newFlight);
             // With the correct method name from FlightsController:
-            var result = await _controller.CreateFlight(newFlight); 
+            var result = await _controller.Create(newFlight); 
 
             // --- ASSERT ---
             // 1. Khẳng định: Kết quả là 201 Created
             // Thêm .Result (vì PostFlight trả về ActionResult<Flight>)
-            var createdResult = Assert.IsType<CreatedAtActionResult>(result.Result);
+            var createdResult = Assert.IsType<CreatedAtActionResult>(result);
 
             // 2. Khẳng định: Dữ liệu trả về là chuyến bay mới
             var returnedFlight = Assert.IsType<Flight>(createdResult.Value);
@@ -104,7 +104,7 @@ namespace API.Tests
             // Replace this line in GetFlight_Returns_NotFound_When_Flight_Missing test:
             // var result = await _controller.GetFlight(99);
             // With the correct method name from FlightsController:
-            var result = await _controller.GetFlightById(99);
+            var result = await _controller.GetById(99);
 
             // --- ASSERT ---
             Assert.IsType<NotFoundResult>(result.Result); // Khẳng định: Là 404 Not Found

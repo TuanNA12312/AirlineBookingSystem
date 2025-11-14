@@ -36,14 +36,26 @@ namespace Repositories.Implementations
             return await _context.Flights.CountAsync();
         }
 
-        public async Task<IEnumerable<Flight>> GetAllAsync() => await _context.Flights
-            .Include(f => f.Airline)
-            .Include(f => f.DepartureAirport)
-            .Include(f => f.ArrivalAirport)
-            .AsNoTracking()
-            .ToListAsync();
-
-        public async Task<Flight?> GetByIdAsync(int id) => await _context.Flights.FindAsync(id);
+        // --- Chuẩn CRUD ---
+        public async Task<Flight?> GetByIdAsync(int id)
+        {
+            // (GetById nên load chi tiết)
+            return await _context.Flights
+               .Include(f => f.Airline)
+               .Include(f => f.DepartureAirport)
+               .Include(f => f.ArrivalAirport)
+               .Include(f => f.Prices).ThenInclude(p => p.SeatClass)
+               .FirstOrDefaultAsync(f => f.FlightId == id);
+        }
+        public async Task<IEnumerable<Flight>> GetAllAsync()
+        {
+            return await _context.Flights
+               .Include(f => f.Airline)
+               .Include(f => f.DepartureAirport)
+               .Include(f => f.ArrivalAirport)
+               .AsNoTracking()
+               .ToListAsync();
+        }
         public async Task AddAsync(Flight flight) { _context.Flights.Add(flight); await _context.SaveChangesAsync(); }
         public async Task UpdateAsync(Flight flight) { _context.Entry(flight).State = EntityState.Modified; await _context.SaveChangesAsync(); }
         public async Task DeleteAsync(int id) { var f = await GetByIdAsync(id); if (f != null) { _context.Flights.Remove(f); await _context.SaveChangesAsync(); } }

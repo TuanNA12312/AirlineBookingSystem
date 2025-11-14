@@ -22,17 +22,16 @@ namespace API.Controllers
 
         // POST: /api/users/register
         [HttpPost("register")]
-        [AllowAnonymous]
+        [AllowAnonymous] // (Public)
         public async Task<ActionResult> Register(RegisterRequestDto request)
         {
             var existingUser = await _userRepo.GetUserByEmailAsync(request.Email);
             if (existingUser != null) return BadRequest("Email đã tồn tại");
-
             var newUser = new User
             {
                 Email = request.Email,
                 FullName = request.FullName,
-                PasswordHash = request.Password
+                PasswordHash = request.Password // Lưu thẳng (theo yêu cầu)
             };
             await _userRepo.AddAsync(newUser);
             return Ok("Đăng ký thành công");
@@ -40,8 +39,8 @@ namespace API.Controllers
 
         // POST: /api/users/login
         [HttpPost("login")]
-        [AllowAnonymous]
-        public async Task<ActionResult<object>> Login(LoginRequestDto request)
+        [AllowAnonymous] // (Public)
+        public async Task<ActionResult<LoginResponseDto>> Login(LoginRequestDto request)
         {
             var user = await _userRepo.GetUserByEmailAsync(request.Email);
             if (user == null) return Unauthorized("Email hoặc mật khẩu không đúng");
@@ -49,40 +48,31 @@ namespace API.Controllers
             var isPasswordValid = await _userRepo.CheckPasswordAsync(user, request.Password);
             if (!isPasswordValid) return Unauthorized("Email hoặc mật khẩu không đúng");
 
-            // Đăng nhập thành công, TẠO TOKEN
             var token = _tokenService.CreateToken(user);
-
-            // Trả về Token và thông tin user (trừ password)
             user.PasswordHash = string.Empty;
-            return Ok(new LoginResponseDto
-            {
-                Token = token,
-                UserInfo = user
-            });
+            return Ok(new LoginResponseDto { Token = token, UserInfo = user });
         }
 
-        // GET: /api/users
+        // --- PHẦN ADMIN ---
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<User>>> GetAll()
         {
             var users = await _userRepo.GetAllAsync();
-            foreach (var user in users) { user.PasswordHash = string.Empty; } // Xóa hash
+            foreach (var user in users) { user.PasswordHash = string.Empty; }
             return Ok(users);
         }
 
-        // GET: /api/users/5
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<User>> GetById(int id)
         {
             var user = await _userRepo.GetByIdAsync(id);
-            if (user == null) return NotFound();
+            if (user == null) return NotFound(new { Message = $"Không tìm thấy User với ID {id}" });
             user.PasswordHash = string.Empty;
             return Ok(user);
         }
 
-        // DELETE: /api/users/5
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int id)

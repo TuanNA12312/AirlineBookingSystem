@@ -7,28 +7,28 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize] // 1. Khóa
     public class SeatClassesController : ControllerBase
     {
         private readonly ISeatClassRepository _seatClassRepo;
-        public SeatClassesController(ISeatClassRepository seatClassRepo)
-        {
-            _seatClassRepo = seatClassRepo;
-        }
+        public SeatClassesController(ISeatClassRepository seatClassRepo) { _seatClassRepo = seatClassRepo; }
 
         // GET: /api/seatclasses
         [HttpGet]
-        [AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<SeatClass>>> GetAllPublic()
+        [AllowAnonymous] // 2. Mở (Public)
+        public async Task<ActionResult<IEnumerable<SeatClass>>> GetAll()
             => Ok(await _seatClassRepo.GetAllAsync());
 
-        // GET: /api/seatclasses/1
+        // --- PHẦN ADMIN ---
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<SeatClass>> GetById(int id)
-            => Ok(await _seatClassRepo.GetByIdAsync(id));
+        {
+            var seatClass = await _seatClassRepo.GetByIdAsync(id);
+            if (seatClass == null) return NotFound(new { Message = $"Không tìm thấy SeatClass với ID {id}" });
+            return Ok(seatClass);
+        }
 
-        // POST: /api/seatclasses
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create(SeatClass seatClass)
@@ -37,7 +37,6 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = seatClass.SeatClassId }, seatClass);
         }
 
-        // PUT: /api/seatclasses/1
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Update(int id, SeatClass seatClass)
@@ -47,7 +46,6 @@ namespace API.Controllers
             return NoContent();
         }
 
-        // DELETE: /api/seatclasses/1
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int id)

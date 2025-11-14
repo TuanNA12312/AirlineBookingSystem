@@ -9,12 +9,14 @@ namespace Repositories.Interfaces
 {
     public interface IUserRepository
     {
+        // --- Chuẩn CRUD ---
         Task<User?> GetByIdAsync(int id);
-        Task<User?> GetUserByEmailAsync(string email);
         Task<IEnumerable<User>> GetAllAsync();
         Task AddAsync(User user);
         Task UpdateAsync(User user);
         Task DeleteAsync(int id);
+        // --- Đặc thù ---
+        Task<User?> GetUserByEmailAsync(string email);
         Task<bool> CheckPasswordAsync(User user, string password);
         Task<int> GetRegisteredUsersCountAsync();
     }

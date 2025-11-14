@@ -7,28 +7,28 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize] // 1. Khóa
     public class AirlinesController : ControllerBase
     {
         private readonly IAirlineRepository _airlineRepo;
-        public AirlinesController(IAirlineRepository airlineRepo)
-        {
-            _airlineRepo = airlineRepo;
-        }
+        public AirlinesController(IAirlineRepository airlineRepo) { _airlineRepo = airlineRepo; }
 
         // GET: /api/airlines
         [HttpGet]
-        [AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<Airline>>> GetAllPublic()
+        [AllowAnonymous] // 2. Mở (Public)
+        public async Task<ActionResult<IEnumerable<Airline>>> GetAll()
             => Ok(await _airlineRepo.GetAllAsync());
 
-        // GET: /api/airlines/VN
+        // --- PHẦN ADMIN ---
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Airline>> GetById(string id)
-            => Ok(await _airlineRepo.GetByIdAsync(id));
+        {
+            var airline = await _airlineRepo.GetByIdAsync(id);
+            if (airline == null) return NotFound(new { Message = $"Không tìm thấy Airline với ID {id}" });
+            return Ok(airline);
+        }
 
-        // POST: /api/airlines
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create(Airline airline)
@@ -37,7 +37,6 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = airline.AirlineCode }, airline);
         }
 
-        // PUT: /api/airlines/VN
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Update(string id, Airline airline)
@@ -47,7 +46,6 @@ namespace API.Controllers
             return NoContent();
         }
 
-        // DELETE: /api/airlines/VN
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(string id)

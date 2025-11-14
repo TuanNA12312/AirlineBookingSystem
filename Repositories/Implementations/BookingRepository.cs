@@ -26,8 +26,7 @@ namespace Repositories.Implementations
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                var flightPrice = await _context.FlightPrices
-                    .FirstOrDefaultAsync(p => p.FlightId == flightId && p.SeatClassId == seatClassId);
+                var flightPrice = await _context.FlightPrices.FirstOrDefaultAsync(p => p.FlightId == flightId && p.SeatClassId == seatClassId);
                 if (flightPrice == null) throw new Exception("Không tìm thấy giá vé.");
 
                 decimal pricePerTicket = flightPrice.Price;
@@ -56,7 +55,7 @@ namespace Repositories.Implementations
                     Status = "Confirmed"
                 };
                 await _context.Bookings.AddAsync(newBooking);
-                await _context.SaveChangesAsync(); // Lưu để lấy BookingId
+                await _context.SaveChangesAsync();
 
                 foreach (var passengerId in passengerIds)
                 {
@@ -105,8 +104,15 @@ namespace Repositories.Implementations
             return await _context.Bookings.Where(b => b.Status == "Confirmed").CountAsync();
         }
 
-        public async Task<IEnumerable<Booking>> GetAllAsync() => await _context.Bookings.AsNoTracking().ToListAsync();
-        public async Task<Booking?> GetByIdAsync(int id) => await _context.Bookings.FindAsync(id);
+        // --- Chuẩn CRUD ---
+        public async Task<Booking?> GetByIdAsync(int id)
+        {
+            return await _context.Bookings
+                .Include(b => b.User)
+                .Include(b => b.Tickets).ThenInclude(t => t.Passenger)
+                .FirstOrDefaultAsync(b => b.BookingId == id);
+        }
+        public async Task<IEnumerable<Booking>> GetAllAsync() => await _context.Bookings.Include(b => b.User).AsNoTracking().ToListAsync();
         public async Task AddAsync(Booking booking) { _context.Bookings.Add(booking); await _context.SaveChangesAsync(); }
         public async Task UpdateAsync(Booking booking) { _context.Entry(booking).State = EntityState.Modified; await _context.SaveChangesAsync(); }
         public async Task DeleteAsync(int id) { var b = await GetByIdAsync(id); if (b != null) { _context.Bookings.Remove(b); await _context.SaveChangesAsync(); } }

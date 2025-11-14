@@ -1,0 +1,72 @@
+﻿@model BusinessObject.Flight
+@{
+    ViewData["Title"] = "Tạo mới Chuyến bay";
+}
+
+<h1>Tạo mới Chuyến bay</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="FlightNumber" class="control-label"></label>
+                <input asp-for="FlightNumber" class="form-control" />
+                <span asp-validation-for="FlightNumber" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="DepartureTime" class="control-label"></label>
+                        <input asp-for="DepartureTime" type="datetime-local" class="form-control" />
+                        <span asp-validation-for="DepartureTime" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="ArrivalTime" class="control-label"></label>
+                        <input asp-for="ArrivalTime" type="datetime-local" class="form-control" />
+                        <span asp-validation-for="ArrivalTime" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="DepartureAirportCode" class="control-label">Điểm đi</label>
+                        <select asp-for="DepartureAirportCode" class="form-control" asp-items="ViewBag.Airports"><option value="">-- Chọn --</option></select>
+                        <span asp-validation-for="DepartureAirportCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label asp-for="ArrivalAirportCode" class="control-label">Điểm đến</label>
+                        <select asp-for="ArrivalAirportCode" class="form-control" asp-items="ViewBag.Airports"><option value="">-- Chọn --</option></select>
+                        <span asp-validation-for="ArrivalAirportCode" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AirlineCode" class="control-label">Hãng bay</label>
+                <select asp-for="AirlineCode" class="form-control" asp-items="ViewBag.Airlines"><option value="">-- Chọn --</option></select>
+                <span asp-validation-for="AirlineCode" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="TotalSeats" class="control-label"></label>
+                <input asp-for="TotalSeats" type="number" class="form-control" />
+                <span asp-validation-for="TotalSeats" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại Danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

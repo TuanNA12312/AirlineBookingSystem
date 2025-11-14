@@ -21,14 +21,13 @@ namespace MVC.Controllers
             _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
-        // --- HÀM 1: TRANG CHỌN VÉ (ĐIỀN HÀNH KHÁCH) ---
         // GET: /Booking/Create?flightId=1
         [HttpGet]
         public async Task<IActionResult> Create(int flightId)
         {
             var client = _httpClientFactory.CreateClient("ApiClient");
 
-            // 1. Gọi API /api/flights/{id} (đã sửa thành [AllowAnonymous])
+            // 1. Gọi API /api/flights/{id}
             var flightResponse = await client.GetAsync($"/api/flights/{flightId}");
 
             // 2. Gọi API /api/seatclasses (public)
@@ -46,39 +45,56 @@ namespace MVC.Controllers
             var seatClassContent = await seatClassResponse.Content.ReadAsStringAsync();
             var seatClasses = JsonSerializer.Deserialize<IEnumerable<SeatClass>>(seatClassContent, _jsonOptions);
 
+            // (Logic lọc hạng ghế)
+            var availableSeatClasses = seatClasses.Where(s =>
+                flight.Prices.Any(p => p.SeatClassId == s.SeatClassId));
+
             // Tạo ViewModel
             var model = new BookingViewModel
             {
                 FlightId = flight.FlightId,
                 FlightDetails = flight,
-                SeatClasses = new SelectList(seatClasses, "SeatClassId", "ClassName"),
-                PassengerDob = DateTime.Today.AddYears(-20) // Gợi ý ngày sinh
+                SeatClasses = new SelectList(availableSeatClasses, "SeatClassId", "ClassName"),
+                PassengerDob = DateTime.Today.AddYears(-20)
             };
 
             return View(model);
         }
 
-        // --- HÀM 2: XỬ LÝ ĐẶT VÉ ---
         // POST: /Booking/Create
         [HttpPost]
         public async Task<IActionResult> Create(BookingViewModel model)
         {
-            // Lấy UserId từ Cookie/Session
             var userId = User.FindFirstValue("UserId");
             if (string.IsNullOrEmpty(userId))
             {
-                return RedirectToAction("Login", "Account"); // Lỗi (nên không xảy ra)
+                return RedirectToAction("Login", "Account");
             }
 
-            // 1. Tạo đối tượng Passenger (từ Form)
+            var client = _httpClientFactory.CreateClient("ApiClient");
+            if (!ModelState.IsValid)
+            {
+                // (Nạp lại dữ liệu nếu Form lỗi)
+                var flightResponse = await client.GetAsync($"/api/flights/{model.FlightId}");
+                var seatClassResponse = await client.GetAsync("/api/seatclasses");
+                var flightContent = await flightResponse.Content.ReadAsStringAsync();
+                var flight = JsonSerializer.Deserialize<Flight>(flightContent, _jsonOptions);
+                var seatClassContent = await seatClassResponse.Content.ReadAsStringAsync();
+                var seatClasses = JsonSerializer.Deserialize<IEnumerable<SeatClass>>(seatClassContent, _jsonOptions);
+                var availableSeatClasses = seatClasses.Where(s => flight.Prices.Any(p => p.SeatClassId == s.SeatClassId));
+
+                model.FlightDetails = flight;
+                model.SeatClasses = new SelectList(availableSeatClasses, "SeatClassId", "ClassName");
+                return View(model);
+            }
+
             var passenger = new Passenger
             {
                 FullName = model.PassengerName,
                 DateOfBirth = model.PassengerDob
-                // (PassportNumber có thể thêm vào form)
             };
 
-            // 2. Tạo Request DTO để gửi cho API
+            // (Lỗi 1 đã được sửa bằng cách thêm file AllViewModels.cs)
             var bookingRequest = new BookingRequestDto
             {
                 UserId = int.Parse(userId),
@@ -87,10 +103,12 @@ namespace MVC.Controllers
                 Passengers = new List<Passenger> { passenger }
             };
 
-            // 3. Gọi API /api/bookings (API này [Authorize])
-            // (HttpClient đã được cấu hình tự động gắn Token)
-            var client = _httpClientFactory.CreateClient("ApiClient");
-            var jsonContent = new StringContent(JsonSerializer.Serialize(bookingRequest), Encoding.UTF8, "application/json");
+            // (Lỗi 2 đã được sửa bằng cách thêm 'using System.Text;')
+            var jsonContent = new StringContent(
+                JsonSerializer.Serialize(bookingRequest),
+                Encoding.UTF8,
+                "application/json" // <-- Lỗi đỏ sẽ hết
+            );
 
             var response = await client.PostAsync("/api/bookings", jsonContent);
 
@@ -100,13 +118,11 @@ namespace MVC.Controllers
                 return RedirectToAction("History");
             }
 
-            // Nếu lỗi (Hết vé, lỗi 400...)
             var errorContent = await response.Content.ReadAsStringAsync();
-            TempData["ErrorMessage"] = $"Lỗi: {errorContent}";
+            TempData["ErrorMessage"] = $"Lỗi khi đặt vé: {errorContent}";
             return RedirectToAction("Index", "Home");
         }
 
-        // --- HÀM 3: XEM LỊCH SỬ ĐẶT VÉ ---
         // GET: /Booking/History
         [HttpGet]
         public async Task<IActionResult> History()
@@ -114,7 +130,6 @@ namespace MVC.Controllers
             var userId = User.FindFirstValue("UserId");
             var client = _httpClientFactory.CreateClient("ApiClient");
 
-            // Gọi API /api/bookings/user/{id} (API này [Authorize])
             var response = await client.GetAsync($"/api/bookings/user/{userId}");
 
             if (response.IsSuccessStatusCode)
@@ -122,11 +137,6 @@ namespace MVC.Controllers
                 var content = await response.Content.ReadAsStringAsync();
                 var bookings = JsonSerializer.Deserialize<List<Booking>>(content, _jsonOptions);
                 return View(bookings);
-            }
-
-            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-            {
-                return RedirectToAction("Login", "Account");
             }
 
             TempData["ErrorMessage"] = "Không thể tải lịch sử đặt vé.";

@@ -9,16 +9,16 @@ namespace Repositories.Interfaces
 {
     public interface IBookingRepository
     {
-        Task<IEnumerable<Booking>> GetBookingsByUserIdAsync(int userId); // (Lịch sử)
-        Task<IEnumerable<Booking>> GetAllAsync();
+        // --- Chuẩn CRUD ---
         Task<Booking?> GetByIdAsync(int id);
+        Task<IEnumerable<Booking>> GetAllAsync();
         Task AddAsync(Booking booking);
         Task UpdateAsync(Booking booking);
         Task DeleteAsync(int id);
+        // --- Đặc thù ---
+        Task<IEnumerable<Booking>> GetBookingsByUserIdAsync(int userId);
         Task<Booking> CreateBookingAsync(int userId, int flightId, int seatClassId, List<Passenger> passengers);
-
         Task<decimal> GetRevenueReportAsync(DateTime from, DateTime to);
-
         Task<int> GetTotalBookingsCountAsync();
     }
 }

@@ -8,105 +8,62 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // 1. Khóa toàn bộ
     public class FlightsController : ControllerBase
     {
         private readonly IFlightRepository _flightRepo;
+        public FlightsController(IFlightRepository flightRepo) { _flightRepo = flightRepo; }
 
-        public FlightsController(IFlightRepository flightRepository)
-        {
-            _flightRepo = flightRepository;
-        }
-
+        // GET: /api/flights/search
         [HttpGet("search")]
-        [AllowAnonymous]
+        [AllowAnonymous] // 2. Mở khóa cho Tìm kiếm (Public)
         public async Task<ActionResult<IEnumerable<Flight>>> SearchFlights(
-            [FromQuery] string departureCode,
-            [FromQuery] string arrivalCode,
-            [FromQuery] DateTime departureDate)
+            [FromQuery] string from, [FromQuery] string to, [FromQuery] DateTime date)
         {
-            try
-            {
-                var flights = await _flightRepo.SearchFlightsAsync(departureCode, arrivalCode, departureDate);
-                return Ok(flights);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Lỗi server nội bộ: {ex.Message}");
-            }
+            var flights = await _flightRepo.SearchFlightsAsync(from, to, date);
+            return Ok(flights);
         }
 
-        // GET: /api/flights
-        [HttpGet]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<IEnumerable<Flight>>> GetAllFlights()
-        {
-            return Ok(await _flightRepo.GetAllAsync());
-        }
-
-        // GET: /api/flights/5
+        // GET: /api/flights/{id}
+        // (User CẦN xem chi tiết để đặt vé)
         [HttpGet("{id}")]
-        [AllowAnonymous]
-        public async Task<ActionResult<Flight>> GetFlightById(int id)
+        [AllowAnonymous] // 2. Mở khóa cho Public (Sửa lỗi logic)
+        public async Task<ActionResult<Flight>> GetById(int id)
         {
             var flight = await _flightRepo.GetByIdAsync(id);
-            if (flight == null)
-            {
-                return NotFound("Không tìm thấy chuyến bay");
-            }
+            if (flight == null) return NotFound(new { Message = $"Không tìm thấy Flight với ID {id}" });
             return Ok(flight);
         }
 
-        // POST: /api/flights
+        // --- PHẦN ADMIN ---
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<IEnumerable<Flight>>> GetAll()
+            => Ok(await _flightRepo.GetAllAsync());
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<Flight>> CreateFlight(Flight flight)
+        public async Task<ActionResult> Create(Flight flight)
         {
-            try
-            {
-                await _flightRepo.AddAsync(flight);
-                // Trả về 201 Created và link để lấy resource
-                return CreatedAtAction(nameof(GetFlightById), new { id = flight.FlightId }, flight);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _flightRepo.AddAsync(flight);
+            return CreatedAtAction(nameof(GetById), new { id = flight.FlightId }, flight);
         }
 
-        // PUT: /api/flights/5
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateFlight(int id, Flight flight)
+        public async Task<ActionResult> Update(int id, Flight flight)
         {
-            if (id != flight.FlightId)
-            {
-                return BadRequest("ID không khớp");
-            }
-            try
-            {
-                await _flightRepo.UpdateAsync(flight);
-                return NoContent(); // 204 No Content - Thành công
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return NotFound("Không tìm thấy chuyến bay để cập nhật");
-            }
+            if (id != flight.FlightId) return BadRequest("ID không khớp");
+            await _flightRepo.UpdateAsync(flight);
+            return NoContent();
         }
 
-        // DELETE: /api/flights/5
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteFlight(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            try
-            {
-                await _flightRepo.DeleteAsync(id);
-                return NoContent(); // 204 No Content - Thành công
-            }
-            catch (Exception)
-            {
-                return NotFound("Không tìm thấy chuyến bay để xoá");
-            }
+            await _flightRepo.DeleteAsync(id);
+            return NoContent();
         }
     }
 }

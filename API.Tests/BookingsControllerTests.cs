@@ -49,7 +49,7 @@ namespace API.Tests
                 .ReturnsAsync(fakeBooking);
 
             // --- ACT ---
-            var result = await _controller.CreateBooking(request);
+            var result = await _controller.Create(request);
 
             // --- ASSERT ---
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
@@ -76,7 +76,7 @@ namespace API.Tests
                 .ThrowsAsync(new Exception("Hết vé")); // <-- Ném lỗi
 
             // --- ACT ---
-            var result = await _controller.CreateBooking(request);
+            var result = await _controller.Create(request);
 
             // --- ASSERT ---
             // 1. Khẳng định: Kết quả là 400 Bad Request
@@ -100,7 +100,7 @@ namespace API.Tests
             };
 
             // --- ACT ---
-            var result = await _controller.CreateBooking(request);
+            var result = await _controller.Create(request);
 
             // --- ASSERT ---
             // 1. Khẳng định: Là 400 Bad Request

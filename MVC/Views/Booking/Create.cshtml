@@ -28,8 +28,8 @@
         <form asp-controller="Booking" asp-action="Create" method="post">
             <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
 
-            <!-- Truyền ID chuyến bay (ẩn) -->
             <input type="hidden" asp-for="FlightId" />
+            <input type="hidden" asp-for="FlightDetails.FlightId" />
 
             <div class="mb-3">
                 <label asp-for="SeatClassId" class="form-label">Hạng ghế</label>

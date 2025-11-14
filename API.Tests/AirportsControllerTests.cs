@@ -29,7 +29,7 @@ namespace API.Tests
             _mockAirportRepo.Setup(repo => repo.GetAllAsync()).ReturnsAsync(new List<Airport> { new Airport() });
             // ACT
             // FIX: Call the actual controller method name GetAllAirports()
-            var result = await _controller.GetAllAirports();
+            var result = await _controller.GetAll();
             // ASSERT
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
             Assert.IsAssignableFrom<IEnumerable<Airport>>(okResult.Value);

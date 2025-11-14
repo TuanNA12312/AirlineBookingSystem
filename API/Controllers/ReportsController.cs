@@ -7,7 +7,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")] // Khóa toàn bộ
     public class ReportsController : ControllerBase
     {
         private readonly IBookingRepository _bookingRepo;

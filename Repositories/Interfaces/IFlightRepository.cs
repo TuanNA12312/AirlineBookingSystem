@@ -9,12 +9,14 @@ namespace Repositories.Interfaces
 {
     public interface IFlightRepository
     {
-        Task<IEnumerable<Flight>> SearchFlightsAsync(string departureCode, string arrivalCode, DateTime departureDate); // (Tìm kiếm)
-        Task<IEnumerable<Flight>> GetAllAsync();
+        // --- Chuẩn CRUD ---
         Task<Flight?> GetByIdAsync(int id);
+        Task<IEnumerable<Flight>> GetAllAsync();
         Task AddAsync(Flight flight);
         Task UpdateAsync(Flight flight);
         Task DeleteAsync(int id);
+        // --- Đặc thù ---
+        Task<IEnumerable<Flight>> SearchFlightsAsync(string departureCode, string arrivalCode, DateTime departureDate);
         Task<int> GetTotalFlightsCountAsync();
     }
 }

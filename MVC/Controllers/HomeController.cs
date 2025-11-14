@@ -19,14 +19,11 @@ namespace MVC.Controllers
             _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
-        // --- HÀM 1: HIỂN THỊ TRANG CHỦ (FORM TÌM KIẾM) ---
         public async Task<IActionResult> Index()
         {
             var model = new SearchViewModel { DepartureDate = DateTime.Today.AddDays(1) };
-
-            // Gọi API /api/airports (public)
             var client = _httpClientFactory.CreateClient("ApiClient");
-            var response = await client.GetAsync("/api/airports");
+            var response = await client.GetAsync("/api/airports"); // (API đã chuẩn hóa)
 
             if (response.IsSuccessStatusCode)
             {
@@ -41,13 +38,11 @@ namespace MVC.Controllers
             return View(model);
         }
 
-        // --- HÀM 2: XỬ LÝ KHI USER NHẤN NÚT "TÌM KIẾM" ---
         [HttpPost]
         public async Task<IActionResult> Index(SearchViewModel model)
         {
             var client = _httpClientFactory.CreateClient("ApiClient");
 
-            // 1. Load lại Sân bay
             var airportResponse = await client.GetAsync("/api/airports");
             if (airportResponse.IsSuccessStatusCode)
             {
@@ -56,17 +51,15 @@ namespace MVC.Controllers
                 model.Airports = new SelectList(airports, "AirportCode", "AirportName");
             }
 
-            // 2. Validate form
             if (model.FromAirport == model.ToAirport)
             {
                 ModelState.AddModelError("ToAirport", "Điểm đi và điểm đến không được trùng nhau.");
             }
             if (!ModelState.IsValid)
             {
-                return View(model); // Trả về View với các lỗi
+                return View(model);
             }
 
-            // 3. Gọi API /api/flights/search
             string searchUrl = $"/api/flights/search?from={model.FromAirport}&to={model.ToAirport}&date={model.DepartureDate:yyyy-MM-dd}";
             var searchResponse = await client.GetAsync(searchUrl);
 
@@ -77,7 +70,7 @@ namespace MVC.Controllers
             }
             else
             {
-                ViewBag.ErrorMessage = "Lỗi khi tìm kiếm chuyến bay. Vui lòng thử lại.";
+                ViewBag.ErrorMessage = "Lỗi khi tìm kiếm chuyến bay.";
                 model.SearchResults = new List<Flight>();
             }
 

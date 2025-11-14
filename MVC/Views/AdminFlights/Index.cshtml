@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BusinessObject.Flight>
+@{
+    ViewData["Title"] = "Quản lý Chuyến bay";
+}
+
+<h1>Quản lý Chuyến bay</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo mới Chuyến bay</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã CB</th>
+            <th>Từ</th>
+            <th>Đến</th>
+            <th>Giờ đi</th>
+            <th>Hãng</th>
+            <th>Còn vé</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FlightNumber</td>
+                <td>@item.DepartureAirportCode</td>
+                <td>@item.ArrivalAirportCode</td>
+                <td>@item.DepartureTime.ToString("HH:mm dd/MM/yy")</td>
+                <td>@item.Airline?.AirlineName</td> <!-- Thêm ? để tránh lỗi Null -->
+                <td>@item.AvailableSeats / @item.TotalSeats</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.FlightId">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.FlightId">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Repositories.Interfaces
 {
-    public interface ISeatClassRepository { 
-        Task<IEnumerable<SeatClass>> GetAllAsync(); 
-        Task<SeatClass?> GetByIdAsync(int id); 
-        Task AddAsync(SeatClass seatClass); 
-        Task UpdateAsync(SeatClass seatClass); 
-        Task DeleteAsync(int id); 
+    public interface ISeatClassRepository {
+        Task<SeatClass?> GetByIdAsync(int id);
+        Task<IEnumerable<SeatClass>> GetAllAsync();
+        Task AddAsync(SeatClass seatClass);
+        Task UpdateAsync(SeatClass seatClass);
+        Task DeleteAsync(int id);
     }
 }

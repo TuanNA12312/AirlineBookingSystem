@@ -28,7 +28,7 @@ namespace API.Tests
             // ARRANGE
             _mockAirlineRepo.Setup(repo => repo.GetAllAsync()).ReturnsAsync(new List<Airline> { new Airline() });
             // ACT
-            var result = await _controller.GetAllPublic();
+            var result = await _controller.GetAll();
             // ASSERT
             Assert.IsType<OkObjectResult>(result.Result);
         }
