@@ -1,0 +1,921 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\reportscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\reportscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\airlinescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\airlinescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\airportscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\airportscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\flightpricescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\flightpricescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\flightscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\flightscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\seatclassescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\seatclassescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\bookingscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\bookingscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api.tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DFDE69A-F650-4FFC-9595-E02FAC73D335}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\migrations\\20251114170830_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\migrations\\20251114170830_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\airportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\airportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\airlinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\airlinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\flightpricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\flightpricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\seatclassescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\seatclassescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\reportrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\controllers\\flightscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\controllers\\flightscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EC236B1C-1D1B-45E5-9BF0-E29FF0A8F751}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\flightpricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\flightpricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iflightpricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iflightpricerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\seatclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\seatclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iseatclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iseatclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\passengerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\passengerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\ipassengerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\ipassengerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\airlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\airlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iairlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iairlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\airportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iairportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iairportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\flightrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\flightrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iflightrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iflightrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{436616E9-3FE8-48D3-A355-DF853888CFB5}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\bookingrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\bookingrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\dataaccess\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD3B53E-1B33-4182-8CB5-E86C0B594D26}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\seatclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\seatclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\flightprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\flightprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|d:\\project\\c# (prn232)\\airlinebookingsystem\\businessobject\\businessobject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{60A823F7-9AC3-473F-B82F-30212DFAF826}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\businessobject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportsControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\ReportsControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\ReportsControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\ReportsControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\ReportsControllerTests.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:16:25.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FlightPricesControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\FlightPricesControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\FlightPricesControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\FlightPricesControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\FlightPricesControllerTests.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:16:05.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AirportsControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\AirportsControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\AirportsControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\AirportsControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\AirportsControllerTests.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:14:17.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FlightsControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\FlightsControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\FlightsControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\FlightsControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\FlightsControllerTests.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:43:49.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AirlinesControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\AirlinesControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\AirlinesControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\AirlinesControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\AirlinesControllerTests.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:15:11.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SeatClassesControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\SeatClassesControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\SeatClassesControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\SeatClassesControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\SeatClassesControllerTests.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:15:44.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingsControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\BookingsControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\BookingsControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\BookingsControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\BookingsControllerTests.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAwwHAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:53:12.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersControllerTests.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\UsersControllerTests.cs",
+              "RelativeDocumentMoniker": "API.Tests\\UsersControllerTests.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API.Tests\\UsersControllerTests.cs",
+              "RelativeToolTip": "API.Tests\\UsersControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:50:47.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251114170830_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\Migrations\\20251114170830_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Migrations\\20251114170830_InitialCreate.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\Migrations\\20251114170830_InitialCreate.cs",
+              "RelativeToolTip": "DataAccess\\Migrations\\20251114170830_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:08:30.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FlightPricesController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\FlightPricesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\FlightPricesController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\FlightPricesController.cs",
+              "RelativeToolTip": "API\\Controllers\\FlightPricesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:41:59.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AirlinesController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\AirlinesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AirlinesController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\AirlinesController.cs",
+              "RelativeToolTip": "API\\Controllers\\AirlinesController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:40:18.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AirportsController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\AirportsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AirportsController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\AirportsController.cs",
+              "RelativeToolTip": "API\\Controllers\\AirportsController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwDYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:26:00.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DataAccess\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAuwL4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:16:25.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:17:59.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:44:12.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "DataAccess\\LoginResponseDto.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\LoginResponseDto.cs",
+              "RelativeToolTip": "DataAccess\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:49:44.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDEAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:27:57.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SeatClassesController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\SeatClassesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\SeatClassesController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\SeatClassesController.cs",
+              "RelativeToolTip": "API\\Controllers\\SeatClassesController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:41:13.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BookingsController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "API\\Controllers\\BookingsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAA3wEwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:31:42.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ReportRequestDto.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\ReportRequestDto.cs",
+              "RelativeDocumentMoniker": "DataAccess\\ReportRequestDto.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\ReportRequestDto.cs",
+              "RelativeToolTip": "DataAccess\\ReportRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:25:56.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\TokenService.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Services\\TokenService.cs",
+              "RelativeToolTip": "API\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:18:18.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\ITokenService.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Services\\ITokenService.cs",
+              "RelativeToolTip": "API\\Services\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:17:51.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FlightsController.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\FlightsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\FlightsController.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Controllers\\FlightsController.cs",
+              "RelativeToolTip": "API\\Controllers\\FlightsController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswBQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:24:00.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T16:08:30.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FlightPriceRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\FlightPriceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\FlightPriceRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\FlightPriceRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\FlightPriceRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvykAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:08:29.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IFlightPriceRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IFlightPriceRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFlightPriceRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IFlightPriceRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IFlightPriceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:08:14.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SeatClassRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\SeatClassRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\SeatClassRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\SeatClassRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\SeatClassRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvykAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:07:51.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T14:17:02.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ISeatClassRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\ISeatClassRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ISeatClassRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\ISeatClassRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ISeatClassRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:07:35.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\TicketRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\TicketRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\TicketRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:07:12.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ITicketRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\ITicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITicketRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\ITicketRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ITicketRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:06:55.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PassengerRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\PassengerRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\PassengerRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\PassengerRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\PassengerRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:06:30.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IPassengerRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IPassengerRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IPassengerRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IPassengerRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IPassengerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:06:12.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AirlineRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\AirlineRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\AirlineRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\AirlineRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\AirlineRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvykAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:03:43.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IAirlineRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IAirlineRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAirlineRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IAirlineRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IAirlineRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:03:06.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AirportRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\AirportRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\AirportRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\AirportRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\AirportRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:02:39.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IAirportRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IAirportRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAirportRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IAirportRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IAirportRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:02:17.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\BookingRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\BookingRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\BookingRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:05:36.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IBookingRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IBookingRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IBookingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:05:16.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "FlightRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\FlightRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\FlightRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\FlightRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\FlightRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:04:29.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IFlightRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IFlightRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFlightRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IFlightRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IFlightRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:04:06.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:59:53.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\UserRepository.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:01:41.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BookingRequestDto.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\BookingRequestDto.cs",
+              "RelativeDocumentMoniker": "DataAccess\\BookingRequestDto.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\BookingRequestDto.cs",
+              "RelativeToolTip": "DataAccess\\BookingRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:30:56.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "DataAccess\\LoginRequestDto.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\LoginRequestDto.cs",
+              "RelativeToolTip": "DataAccess\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:27:18.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RegisterRequestDto.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\RegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "DataAccess\\RegisterRequestDto.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\DataAccess\\RegisterRequestDto.cs",
+              "RelativeToolTip": "DataAccess\\RegisterRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:26:54.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Ticket.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Ticket.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Ticket.cs",
+              "RelativeToolTip": "BusinessObject\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:45:58.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Passenger.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Passenger.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Passenger.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Passenger.cs",
+              "RelativeToolTip": "BusinessObject\\Passenger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:45:35.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "FlightPrice.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\FlightPrice.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\FlightPrice.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\FlightPrice.cs",
+              "RelativeToolTip": "BusinessObject\\FlightPrice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:45:18.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "SeatClass.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\SeatClass.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\SeatClass.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\SeatClass.cs",
+              "RelativeToolTip": "BusinessObject\\SeatClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:44:58.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Flight.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Flight.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Flight.cs",
+              "RelativeToolTip": "BusinessObject\\Flight.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:44:39.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Airline.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Airline.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Airline.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Airline.cs",
+              "RelativeToolTip": "BusinessObject\\Airline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:44:22.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Airport.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Airport.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Airport.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Airport.cs",
+              "RelativeToolTip": "BusinessObject\\Airport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:44:06.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Booking.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Booking.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\Booking.cs",
+              "RelativeToolTip": "BusinessObject\\Booking.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:43:41.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\User.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\User.cs",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\User.cs",
+              "RelativeToolTip": "BusinessObject\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T13:42:51.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "BusinessObject.csproj",
+              "DocumentMoniker": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\BusinessObject.csproj",
+              "RelativeDocumentMoniker": "BusinessObject\\BusinessObject.csproj",
+              "ToolTip": "D:\\Project\\C# (PRN232)\\AirlineBookingSystem\\BusinessObject\\BusinessObject.csproj",
+              "RelativeToolTip": "BusinessObject\\BusinessObject.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-14T13:08:41.543Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

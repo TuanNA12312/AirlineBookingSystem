@@ -1,0 +1,11 @@
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\bin\Debug\net8.0\BusinessObject.deps.json
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\bin\Debug\net8.0\BusinessObject.dll
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\bin\Debug\net8.0\BusinessObject.pdb
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.dll
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\refint\BusinessObject.dll
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\BusinessObject.pdb
+D:\Project\C# (PRN232)\AirlineBookingSystem\BusinessObject\obj\Debug\net8.0\ref\BusinessObject.dll
