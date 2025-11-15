@@ -10,6 +10,6 @@ namespace DataAccess
     public class LoginResponseDto
     {
         public string Token { get; set; } = string.Empty;
-        public User UserInfo { get; set; }
+        public UserSessionDto UserInfo { get; set; }
     }
 }

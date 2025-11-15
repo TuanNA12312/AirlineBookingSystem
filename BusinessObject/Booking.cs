@@ -32,5 +32,10 @@ namespace BusinessObject
         public string Status { get; set; } = "Pending";
 
         public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
+
+        public int FlightId { get; set; }
+
+        [ForeignKey("FlightId")]
+        public virtual Flight? Flight { get; set; }
     }
 }

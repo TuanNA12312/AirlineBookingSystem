@@ -1,0 +1,101 @@
+﻿@model BusinessObject.Booking
+@{
+    ViewData["Title"] = "Chi tiết đơn đặt chỗ";
+}
+
+<h1 class="mt-4">Chi tiết đơn đặt chỗ #@Model.BookingId</h1>
+<hr />
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-primary text-white">
+        Thông tin chung
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Ngày đặt</dt>
+            <dd class="col-sm-9">@Model.BookingDate.ToString("dd/MM/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Trạng thái</dt>
+            <dd class="col-sm-9">
+                <span class="badge @(Model.Status == "Cancelled" ? "bg-danger" : (Model.Status == "Confirmed" ? "bg-success" : "bg-warning"))">@Model.Status</span>
+            </dd>
+
+            <dt class="col-sm-3">Tổng tiền</dt>
+            <dd class="col-sm-9 text-danger fw-bold">@Model.TotalPrice.ToString("N0") VNĐ</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-success text-white">
+        Thông tin chuyến bay
+    </div>
+    @if (Model.Flight != null)
+    {
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Chuyến bay</dt>
+                <dd class="col-sm-9">@Model.Flight.FlightNumber (@Model.Flight.AirlineCode)</dd>
+
+                <dt class="col-sm-3">Điểm đi</dt>
+                <dd class="col-sm-9">@Model.Flight.DepartureAirportCode - @Model.Flight.DepartureTime.ToString("HH:mm, dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Điểm đến</dt>
+                <dd class="col-sm-9">@Model.Flight.ArrivalAirportCode - @Model.Flight.ArrivalTime.ToString("HH:mm, dd/MM/yyyy")</dd>
+            </dl>
+        </div>
+    }
+    else
+    {
+        <div class="card-body">Không có thông tin chuyến bay.</div>
+    }
+</div>
+
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-info text-white">
+        Thông tin Vé và Hành khách
+    </div>
+    <div class="card-body">
+        @if (Model.Tickets != null && Model.Tickets.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tên hành khách</th>
+                        <th>Hạng ghế</th>
+                        <th>Giá vé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ticket in Model.Tickets)
+                    {
+                        <tr>
+                            <td>@ticket.Passenger?.FullName</td>
+                            {{!-- SỬA LỖI: Hiển thị tên hạng ghế thay vì AssignedSeat không tồn tại --}}
+                            <td>@ticket.SeatClass.ClassName</td>
+                            {{!-- SỬA LỖI: Dùng đúng thuộc tính PricePaid --}}
+                            <td>@ticket.PricePaid.ToString("N0") VNĐ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Không có thông tin vé/hành khách.</p>
+        }
+    </div>
+</div>
+
+<div class="mt-4">
+    <a asp-action="History" class="btn btn-secondary">Quay lại lịch sử</a>
+
+    @if (Model.Status != "Cancelled")
+    {
+        <form asp-action="Cancel" asp-route-id="@Model.BookingId" method="post" class="d-inline"
+              onsubmit="return confirm('Xác nhận hủy đơn đặt chỗ này? Thao tác này không thể hoàn tác.');">
+            <button type="submit" class="btn btn-danger">Hủy đơn đặt chỗ</button>
+        </form>
+    }
+</div>

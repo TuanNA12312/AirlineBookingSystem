@@ -31,5 +31,6 @@ namespace BusinessObject
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal PricePaid { get; set; } // Giá vé thực trả tại thời điểm mua
+        public string AssignedSeat { get; set; }
     }
 }

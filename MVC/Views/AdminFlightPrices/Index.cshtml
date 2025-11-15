@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BusinessObject.FlightPrice>
+@{
+    ViewData["Title"] = "Quản lý Giá vé";
+}
+
+<h1 class="mt-4">@ViewData["Title"]</h1>
+<p><a asp-action="Create" class="btn btn-primary">Thiết lập Giá vé mới</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Mã Chuyến bay</th>
+            <th>Hạng ghế</th>
+            <th>Giá (VNĐ)</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FlightPriceId</td>
+                <td>@item.Flight?.FlightNumber</td>
+                <td>@item.SeatClass?.ClassName</td>
+                <td>@item.Price.ToString("N0")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.FlightPriceId" class="btn btn-sm btn-warning">Sửa</a> |
+                    <form asp-action="Delete" asp-route-id="@item.FlightPriceId" method="post" class="d-inline" onsubmit="return confirm('Xóa mức giá này?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

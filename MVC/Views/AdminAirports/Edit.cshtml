@@ -1,0 +1,43 @@
+﻿@model BusinessObject.Airport
+@{
+    ViewData["Title"] = "Chỉnh sửa Sân bay";
+}
+
+<h1 class="mt-4">Chỉnh sửa: @Model.AirportName</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="AirportCode" />
+
+            <div class="form-group mb-3">
+                <label asp-for="AirportCode" class="control-label"></label>
+                <input asp-for="AirportCode" class="form-control" readonly /> @* Hiển thị nhưng không cho sửa *@
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="AirportName" class="control-label"></label>
+                <input asp-for="AirportName" class="form-control" />
+                <span asp-validation-for="AirportName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Lưu thay đổi" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

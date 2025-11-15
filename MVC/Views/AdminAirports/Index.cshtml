@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BusinessObject.Airport>
+@{
+    ViewData["Title"] = "Quản lý Sân bay";
+}
+
+<h1 class="mt-4">@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Thêm Sân bay mới</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Mã Sân bay</th>
+            <th>Tên Sân bay</th>
+            <th>Thành phố</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AirportCode</td>
+                <td>@item.AirportName</td>
+                <td>@item.City</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AirportCode" class="btn btn-sm btn-warning">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AirportCode" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

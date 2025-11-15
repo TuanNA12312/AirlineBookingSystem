@@ -20,5 +20,8 @@ namespace Repositories.Interfaces
         Task<Booking> CreateBookingAsync(int userId, int flightId, int seatClassId, List<Passenger> passengers);
         Task<decimal> GetRevenueReportAsync(DateTime from, DateTime to);
         Task<int> GetTotalBookingsCountAsync();
+        Task<Booking?> GetBookingDetailsAsync(int bookingId);
+        Task<bool> UpdateBookingStatusAsync(int bookingId, string newStatus);
+        Task<IEnumerable<Booking>> GetUserBookingHistoryAsync(int userId);
     }
 }

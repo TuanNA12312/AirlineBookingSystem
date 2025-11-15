@@ -1,0 +1,27 @@
+﻿@model BusinessObject.Airport
+@{
+    ViewData["Title"] = "Xóa Sân bay";
+}
+
+<h1 class="mt-4">Xác nhận xóa</h1>
+<h3>Bạn có chắc chắn muốn xóa Sân bay "@Model.AirportName" (@Model.AirportCode) không?</h3>
+<hr />
+
+<div class="card bg-light p-4">
+    <dl class="row">
+        <dt class="col-sm-3">Mã Sân bay</dt>
+        <dd class="col-sm-9">@Model.AirportCode</dd>
+
+        <dt class="col-sm-3">Tên Sân bay</dt>
+        <dd class="col-sm-9">@Model.AirportName</dd>
+
+        <dt class="col-sm-3">Thành phố</dt>
+        <dd class="col-sm-9">@Model.City</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AirportCode" />
+        <input type="submit" value="Xóa" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

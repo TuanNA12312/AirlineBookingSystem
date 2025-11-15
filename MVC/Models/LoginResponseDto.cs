@@ -5,9 +5,8 @@ namespace MVC.Models
 {
     public class LoginResponseDto
     {
-        [JsonPropertyName("token")]
-        public string Token { get; set; } = string.Empty;
-        [JsonPropertyName("userInfo")]
-        public User UserInfo { get; set; }
+        // PHẢI dùng tên UserInfo để khớp với API và Session!
+        public UserSessionDto UserInfo { get; set; }
+        public string Token { get; set; }
     }
 }

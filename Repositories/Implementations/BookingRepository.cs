@@ -116,5 +116,44 @@ namespace Repositories.Implementations
         public async Task AddAsync(Booking booking) { _context.Bookings.Add(booking); await _context.SaveChangesAsync(); }
         public async Task UpdateAsync(Booking booking) { _context.Entry(booking).State = EntityState.Modified; await _context.SaveChangesAsync(); }
         public async Task DeleteAsync(int id) { var b = await GetByIdAsync(id); if (b != null) { _context.Bookings.Remove(b); await _context.SaveChangesAsync(); } }
+
+        public async Task<Booking?> GetBookingDetailsAsync(int bookingId)
+        {
+            return await _context.Bookings
+                .Include(b => b.Tickets) 
+                    .ThenInclude(t => t.Passenger)
+                .Include(b => b.Flight)
+                .FirstOrDefaultAsync(b => b.BookingId == bookingId);
+        }
+
+        public async Task<bool> UpdateBookingStatusAsync(int bookingId, string newStatus)
+        {
+            var booking = await _context.Bookings.FindAsync(bookingId);
+            if (booking == null)
+            {
+                return false;
+            }
+
+            booking.Status = newStatus;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<IEnumerable<Booking>> GetUserBookingHistoryAsync(int userId)
+        {
+            return await _context.Bookings
+                .Where(b => b.UserId == userId)
+                .OrderByDescending(b => b.BookingDate)
+                .Include(b => b.Flight) // Kèm theo thông tin chuyến bay
+                .ToListAsync();
+        }
     }
 }

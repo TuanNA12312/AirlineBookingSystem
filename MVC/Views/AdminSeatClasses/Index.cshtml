@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BusinessObject.SeatClass>
+@{
+    ViewData["Title"] = "Quản lý Hạng ghế";
+}
+
+<h1 class="mt-4">@ViewData["Title"]</h1>
+<p><a asp-action="Create" class="btn btn-primary">Thêm Hạng ghế mới</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên Hạng ghế</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SeatClassId</td>
+                <td>@item.ClassName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SeatClassId" class="btn btn-sm btn-warning">Sửa</a> |
+                    <form asp-action="Delete" asp-route-id="@item.SeatClassId" method="post" class="d-inline" onsubmit="return confirm('Xóa hạng ghế này?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BusinessObject.Booking>
+@{
+    ViewData["Title"] = "Quản lý Đặt vé";
+}
+
+<h1 class="mt-4">@ViewData["Title"]</h1>
+<p class="mb-4">Tổng số đơn đặt vé trong hệ thống.</p>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserID</th>
+            <th>Mã PNR</th>
+            <th>Ngày đặt</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BookingId</td>
+                <td>@item.UserId</td>
+                <td>@item.BookingDate.ToString("dd/MM/yyyy")</td>
+                <td>@item.TotalPrice.ToString("N0") VNĐ</td>
+                <td><span class="badge @(item.Status == "Cancelled" ? "bg-danger" : (item.Status == "Confirmed" ? "bg-success" : "bg-warning"))">@item.Status</span></td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.BookingId" class="btn btn-sm btn-info">Chi tiết</a>
+
+                    @if (item.Status == "Pending")
+                    {
+                        <form asp-action="Confirm" asp-route-id="@item.BookingId" method="post" class="d-inline"
+                              onsubmit="return confirm('Xác nhận thanh toán thủ công cho đơn này?');">
+                            <button type="submit" class="btn btn-sm btn-success">Xác nhận</button>
+                        </form>
+                    }
+
+                    @if (item.Status != "Cancelled")
+                    {
+                        <form asp-action="Cancel" asp-route-id="@item.BookingId" method="post" class="d-inline"
+                              onsubmit="return confirm('Hủy đơn đặt chỗ này?');">
+                            <button type="submit" class="btn btn-sm btn-danger">Hủy</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

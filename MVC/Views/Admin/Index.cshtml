@@ -1,0 +1,74 @@
+﻿@model MVC.Models.AdminDashboardViewModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1 class="mt-4">Admin Hub</h1>
+<p class="lead">Chào mừng bạn đến với khu vực quản trị. Vui lòng chọn chức năng quản lý bên dưới.</p>
+
+@* Hiển thị Dashboard Stats nếu có *@
+@if (Model != null)
+{
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-primary text-white shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng số Vé đã đặt</h5>
+                    <p class="card-text fs-3">@Model.TotalBookings.ToString("N0")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-success text-white shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng số Người dùng</h5>
+                    <p class="card-text fs-3">@Model.TotalUsers.ToString("N0")</p>
+                </div>
+            </div>
+        </div>
+        @* Có thể thêm các thống kê khác tại đây nếu API Report trả về *@
+    </div>
+}
+else if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        <strong>Lỗi:</strong> @ViewBag.ErrorMessage
+    </div>
+}
+
+<h2 class="mt-4 mb-3">Các Chức năng Quản lý</h2>
+<div class="row">
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Quản lý Hãng bay</h5>
+                <p class="card-text">Thêm, sửa, xóa thông tin các hãng hàng không.</p>
+                <a asp-controller="AdminAirlines" asp-action="Index" class="btn btn-outline-primary mt-auto">Quản lý</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Quản lý Sân bay</h5>
+                <p class="card-text">Thêm, sửa, xóa thông tin các sân bay.</p>
+                <a asp-controller="AdminAirports" asp-action="Index" class="btn btn-outline-primary mt-auto">Quản lý</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Quản lý Người dùng</h5>
+                <p class="card-text">Xem, sửa, xóa thông tin tài khoản người dùng và phân quyền.</p>
+                <a asp-controller="AdminUsers" asp-action="Index" class="btn btn-outline-primary mt-auto">Quản lý</a>
+            </div>
+        </div>
+    </div>
+
+    @* Thêm các module khác như AdminFlights, AdminBookings tại đây *@
+
+</div>
